@@ -4,7 +4,35 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<script>
+    if (document.images) {
+        var image1 = new Image();
+        image1.src = "http://images.genius.com/88c5ded1a0566dff01af570134b73722.1000x1000x1.jpg"
+        var image2 = new Image();
+        image2.src = "https://i.scdn.co/image/934c57df9fbdbbaa5e93b55994a4cb9571fd2085"
+    }
+</script>
+
+<body class="maincss">
+    <div class="text-center">
+        <h1 class="display-4">The Beatles - A fan page</h1>
+        <p>Here we have a selection of my favorite songs by The Beatles.</p>
+    </div>
+    <div class="main">
+        <div class="photo">
+            <a href="http://images.genius.com/88c5ded1a0566dff01af570134b73722.1000x1000x1.jpg" onmouseover="document.myImage.src = image2.src;"
+               onmouseout="document.myImage.src = image1.src;">
+                <img name="myImage" src="http://images.genius.com/88c5ded1a0566dff01af570134b73722.1000x1000x1.jpg" />
+            </a>
+        </div>
+        <div class="music">
+            <p>First we begin with a classic... Blackbird.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Man4Xw8Xypo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Second we visit another classic... Norwegian Wood.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_V6y1ZCg_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Last but not least, we have one of their most iconic songs... Here Comes the Sun.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xUNqsfFUwhY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
